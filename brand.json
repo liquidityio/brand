@@ -1,0 +1,74 @@
+{
+  "brand": {
+    "name": "Liquidity",
+    "title": "Liquidity | Regulated Digital Assets",
+    "description": "Regulated digital asset exchange",
+    "shortName": "LQDTY",
+    "labsName": "Liquidity",
+    "legalEntity": "Liquidity Inc.",
+    "walletName": "Liquidity Wallet",
+    "protocolName": "Liquidity Protocol",
+    "copyrightHolder": "Liquidity Inc.",
+    "appDomain": "liquidity.io",
+    "docsDomain": "docs.liquidity.io",
+    "infoDomain": "info.liquidity.io",
+    "gatewayDomain": "api.liquidity.io",
+    "wsDomain": "ws.liquidity.io",
+    "helpUrl": "https://docs.liquidity.io",
+    "termsUrl": "https://liquidity.io/terms",
+    "privacyUrl": "https://liquidity.io/privacy",
+    "downloadUrl": "https://liquidity.io/wallet",
+    "complianceEmail": "compliance@liquidity.io",
+    "supportEmail": "support@liquidity.io",
+    "twitter": "https://x.com/liquidityio",
+    "farcaster": "",
+    "linkedin": "",
+    "tiktok": "",
+    "github": "https://github.com/liquidityio",
+    "discord": "",
+    "logoUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/logo.svg",
+    "faviconUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/favicon.png",
+    "primaryColor": "#3B82F6",
+    "theme": {
+      "light": {
+        "accent1": "#2563EB",
+        "accent1Hovered": "#1D4ED8",
+        "surface1": "#FFFFFF",
+        "surface2": "#EFF6FF",
+        "neutral1": "#111827",
+        "neutral2": "rgba(17, 24, 39, 0.6)"
+      },
+      "dark": {
+        "accent1": "#60A5FA",
+        "accent1Hovered": "#93C5FD",
+        "surface1": "#000000",
+        "surface2": "#172554",
+        "neutral1": "#F9FAFB",
+        "neutral2": "rgba(249, 250, 251, 0.6)"
+      }
+    }
+  },
+  "chains": {
+    "defaultChainId": 1,
+    "supported": [1, 96369, 42161, 8453, 137]
+  },
+  "rpc": {
+    "1": "https://eth.llamarpc.com",
+    "96369": "https://api.lux.network/ext/bc/C/rpc",
+    "42161": "https://arb1.arbitrum.io/rpc",
+    "8453": "https://mainnet.base.org",
+    "137": "https://polygon-rpc.com"
+  },
+  "api": {
+    "graphql": "",
+    "gateway": "https://api.liquidity.io",
+    "insights": "https://insights.hanzo.ai"
+  },
+  "iam": {
+    "provider": "https://id.liquidity.io",
+    "clientId": "liquidity-app"
+  },
+  "walletConnect": {
+    "projectId": ""
+  }
+}
