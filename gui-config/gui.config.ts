@@ -42,7 +42,7 @@
 
 import { createFont, createGui } from '@hanzo/gui'
 import { createThemes } from '@hanzogui/theme-builder'
-import { shorthands as baseShorthands } from '@hanzogui/shorthands/v4'
+import { shorthands as baseShorthands } from '@hanzogui/shorthands'
 import { getDefaultGuiConfig } from '@hanzogui/config-default'
 
 // Extract media and tokens from the default config
@@ -142,9 +142,8 @@ const brandDark: Record<string, string> = {
 // 3. SHORTHANDS
 // ────────────────────────────────────────────────────────────
 //
-// The base v4 shorthands cover padding, margin, position, and
-// a few others. We extend them with common props that the base
-// set is missing — width, height, flex, border sides, etc.
+// @hanzogui/shorthands default export includes 70+ shorthands
+// (w, h, f, bw, bc, pos, ov, etc.) — all Tailwind-aligned.
 //
 // With onlyAllowShorthands: true, you MUST use the shorthand
 // when one exists. This keeps code consistent:
@@ -153,39 +152,7 @@ const brandDark: Record<string, string> = {
 
 const shorthands = {
   ...baseShorthands,
-
-  // Dimensions
-  w: 'width',
-  h: 'height',
-
-  // Flex
-  f: 'flex',
-  fb: 'flexBasis',
-  fd: 'flexDirection',
-  fw: 'flexWrap',
-
-  // Border — width
-  bw: 'borderWidth',
-  btw: 'borderTopWidth',
-  bbw: 'borderBottomWidth',
-  blw: 'borderLeftWidth',
-  brw: 'borderRightWidth',
-
-  // Border — color
-  bc: 'borderColor',
-  btc: 'borderTopColor',
-  bbc: 'borderBottomColor',
-  blc: 'borderLeftColor',
-  brc: 'borderRightColor',
-
-  // Overflow
-  ov: 'overflow',
-
-  // Opacity
-  op: 'opacity',
-
-  // Display / position (position already uses full name)
-  pos: 'position',
+  op: 'opacity',  // alias for upstream 'o'
 } as const
 
 // ────────────────────────────────────────────────────────────
