@@ -1,0 +1,207 @@
+/* ============================================================
+   LiquidityIO design system — Tailwind v4 theme
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   OKLCH channel primitives — raw channels (not full colors)
+   so semantic tokens can compose alpha: oklch(var(--ch) / .65)
+   ---------------------------------------------------------- */
+:root {
+  --ch-astra-0:    100%    0     0;
+  --ch-astra-100:  98.93% .003  48.72;
+  --ch-astra-200:  97.98% .005  78.3;
+  --ch-astra-300:  95.63% .006  75.41;
+  --ch-astra-400:  93.5%  .007  80.72;
+  --ch-astra-700:  87.11% .011  81.79;
+  --ch-astra-1000: 26.42% .013  93.9;
+  --ch-astra-2000: 22.82% .047  83.09;
+
+  --ch-umbra-0:    0%     0     0;
+  --ch-umbra-100:  20.09% .003  67.68;
+  --ch-umbra-200:  23.15% .002  67.7;
+  --ch-umbra-300:  25.68% .002  67.72;
+  --ch-umbra-400:  28.16% .002  67.73;
+  --ch-umbra-1000: 87.35% .002  67.8;
+}
+
+@theme {
+  /* --------------------------------------------------------
+     Easing
+     -------------------------------------------------------- */
+  --ease-out-cubic:    cubic-bezier(.33, 1, .68, 1);
+  --ease-in-out-cubic: cubic-bezier(.65, 0, .35, 1);
+  --ease-out-soft:     cubic-bezier(.36, 1.3, .64, 1);
+  --ease-in-out-quart: cubic-bezier(.76, 0, .24, 1);
+  --ease-out-quint:    cubic-bezier(.22, 1, .36, 1);
+  --ease-in-cubic:     cubic-bezier(.32, 0, .67, 0);
+  --ease-in-out-sine:  cubic-bezier(.37, 0, .63, 1);
+
+  /* --------------------------------------------------------
+     Typography
+     -------------------------------------------------------- */
+  --font-sans:  "pplxSans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono:  "pplxSansMono", ui-monospace, monospace;
+  --font-serif: "pplxSerif", ui-serif, Georgia, serif;
+
+  --font-weight-thin:       400;
+  --font-weight-extralight: 400;
+  --font-weight-light:      400;
+  --font-weight-normal:     400;
+  --font-weight-semimedium: 500;
+  --font-weight-medium:     500;
+  --font-weight-semibold:   500;
+  --font-weight-bold:       550;
+  --font-weight-extrabold:  550;
+  --font-weight-black:      550;
+
+  /* --------------------------------------------------------
+     Spacing / size scale
+     -------------------------------------------------------- */
+  --spacing-2:  2px;
+  --spacing-4:  4px;
+  --spacing-8:  8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+
+  --spacing-header-height:           56px;
+  --spacing-banner-height:           34px;
+  --spacing-sidebar-width:           220px;
+  --spacing-sidebar-width-collapsed: 90px;
+  --spacing-sidebar-pinned-width:    200px;
+  --spacing-thread-width:            1100px;
+  --spacing-thread-content-width:    720px;
+  --spacing-min-touch-target:        2.75rem;
+
+  /* --------------------------------------------------------
+     Color — brand
+     -------------------------------------------------------- */
+  --color-bar-fill: #1a2744;
+
+  /* --------------------------------------------------------
+     Color — named accent palettes
+     -------------------------------------------------------- */
+  --color-mint-50:       oklch(98.85% .012 170.28);
+  --color-mint-150:      oklch(93.8%  .015 171.04);
+  --color-pale-blue-200: oklch(30.39% .04  213.68);
+
+  --color-hydra-350:    oklch(71.92% .112 205.51);
+  --color-hydra-450:    oklch(55.27% .086 208.61);
+  --color-terra-350:    oklch(70.73% .133 38.31);
+  --color-terra-450:    oklch(52.75% .13  37.37);
+  --color-jenova-250:   oklch(84.44% .092 .32);
+  --color-jenova-450:   oklch(49.39% .109 9.38);
+  --color-rosa-350:     oklch(68.18% .207 22.93);
+  --color-rosa-450:     oklch(51.72% .199 21.85);
+  --color-costa-300:    oklch(80.62% .151 67.71);
+  --color-costa-350:    oklch(73.83% .169 62.71);
+  --color-costa-400:    oklch(65.87% .163 54.96);
+  --color-dalmasca-300: oklch(83.9%  .132 96.6);
+  --color-dalmasca-400: oklch(69.87% .123 97.59);
+  --color-gridania-350: oklch(75.63% .107 109.92);
+  --color-gridania-450: oklch(60.17% .065 108.2);
+  --color-limsa-350:    oklch(73.11% .113 232.51);
+  --color-limsa-450:    oklch(53.86% .101 231.01);
+  --color-kuja-350:     oklch(72.5%  .119 316.63);
+  --color-kuja-450:     oklch(54.3%  .097 316.69);
+
+  /* Color — neutral scales */
+  --color-astra-0:    oklch(100%    0     0);
+  --color-astra-100:  oklch(98.93% .003  48.72);
+  --color-astra-200:  oklch(97.98% .005  78.3);
+  --color-astra-300:  oklch(95.63% .006  75.41);
+  --color-astra-400:  oklch(93.5%  .007  80.72);
+  --color-astra-700:  oklch(87.11% .011  81.79);
+  --color-astra-1000: oklch(26.42% .013  93.9);
+  --color-astra-2000: oklch(22.82% .047  83.09);
+
+  --color-umbra-0:    oklch(0%     0     0);
+  --color-umbra-100:  oklch(20.09% .003  67.68);
+  --color-umbra-200:  oklch(23.15% .002  67.7);
+  --color-umbra-300:  oklch(25.68% .002  67.72);
+  --color-umbra-400:  oklch(28.16% .002  67.73);
+  --color-umbra-1000: oklch(87.35% .002  67.8);
+
+  /* Color — status primitives */
+  --color-carbuncle-0:   oklch(68.25% .072 206.25);
+  --color-carbuncle-500: oklch(55.25% .085 207.66);
+  --color-ifrit-300:     oklch(72.01% .178 11.8);
+  --color-ifrit-600:     oklch(49.18% .143 16.18);
+  --color-phoenix-300:   oklch(72.82% .166 39.4);
+  --color-phoenix-600:   oklch(49.02% .107 45.28);
+  --color-garuda-300:    oklch(69.92% .166 144.58);
+  --color-garuda-600:    oklch(45.93% .133 145.32);
+
+  /* --------------------------------------------------------
+     Semantic colors — light (default)
+     -------------------------------------------------------- */
+  --color-super:    oklch(55.25% .085 207.66);
+  --color-caution:  oklch(49.18% .143 16.18);
+  --color-warning:  oklch(49.02% .107 45.28);
+  --color-positive: oklch(45.93% .133 145.32);
+  --color-negative: oklch(49.18% .143 16.18);
+
+  --color-bg-underlay: oklch(var(--ch-astra-200));
+
+  --color-bg-base:     white;
+
+  --color-bg-raised:   oklch(var(--ch-astra-100));
+  --color-bg-inverse:  oklch(var(--ch-astra-1000));
+  --color-bg-quiet:    oklch(var(--ch-astra-2000) / .07);
+  --color-bg-subtle:   oklch(var(--ch-astra-2000) / .035);
+
+  --color-fg:          oklch(var(--ch-astra-1000));
+  --color-fg-quiet:    oklch(var(--ch-astra-1000) / .65);
+  --color-fg-quieter:  oklch(var(--ch-astra-1000) / .4);
+  --color-fg-subtle:   oklch(var(--ch-astra-1000) / .14);
+  --color-fg-subtlest: oklch(var(--ch-astra-1000) / .07);
+  --color-fg-inverse:  oklch(var(--ch-astra-200));
+
+  --color-info-bg:       oklch(80.62% .151 67.71 / .1);
+  --color-info-border:   oklch(65.87% .163 54.96 / .2);
+  --color-info-fg:       oklch(var(--ch-astra-1000) / .8);
+
+  --color-border-focus:  oklch(var(--ch-astra-1000) / .2);
+  --color-backdrop:      oklch(var(--ch-astra-700));
+  --color-offset:        oklch(var(--ch-astra-300));
+  --color-button:        oklch(var(--ch-astra-1000));
+  --color-button-hover:  oklch(var(--ch-astra-1000));
+  --color-button-active: oklch(var(--ch-umbra-0));
+}
+
+/* --------------------------------------------------------
+   Semantic colors — dark override
+   -------------------------------------------------------- */
+[data-color-scheme='dark'] {
+  --color-super:    oklch(68.25% .072 206.25);
+  --color-caution:  oklch(72.01% .178 11.8);
+  --color-warning:  oklch(72.82% .166 39.4);
+  --color-positive: oklch(69.92% .166 144.58);
+  --color-negative: oklch(72.01% .178 11.8);
+
+  --color-bg-underlay: oklch(var(--ch-umbra-100));
+  --color-bg-base:     oklch(var(--ch-umbra-100));
+  --color-bg-raised:   oklch(var(--ch-umbra-200));
+  --color-bg-inverse:  oklch(var(--ch-umbra-1000));
+  --color-bg-quiet:    oklch(var(--ch-umbra-1000) / .07);
+  --color-bg-subtle:   oklch(var(--ch-umbra-1000) / .035);
+
+  --color-fg:          oklch(var(--ch-umbra-1000));
+  --color-fg-quiet:    oklch(var(--ch-umbra-1000) / .6);
+  --color-fg-quieter:  oklch(var(--ch-umbra-1000) / .4);
+  --color-fg-subtle:   oklch(var(--ch-umbra-1000) / .14);
+  --color-fg-subtlest: oklch(var(--ch-umbra-1000) / .07);
+  --color-fg-inverse:  oklch(var(--ch-umbra-100));
+
+  --color-info-bg:       oklch(80.62% .151 67.71 / .08);
+  --color-info-border:   oklch(65.87% .163 54.96 / .15);
+  --color-info-fg:       oklch(var(--ch-umbra-1000) / .8);
+
+  --color-border-focus:  oklch(var(--ch-umbra-1000) / .2);
+  --color-backdrop:      oklch(var(--ch-umbra-100));
+  --color-offset:        oklch(var(--ch-umbra-300));
+  --color-button:        oklch(var(--ch-umbra-1000));
+  --color-button-hover:  oklch(var(--ch-umbra-1000));
+  --color-button-active: oklch(var(--ch-astra-0));
+}

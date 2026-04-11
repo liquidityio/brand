@@ -1,36 +1,55 @@
 {
   "name": "@liquidityio/brand",
-  "version": "1.0.0",
-  "description": "Brand assets and configuration for Liquidity",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "version": "1.1.1",
+  "description": "Brand assets, GUI config, and components for Liquidity",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./brand.json": "./brand.json",
-    "./loader": {
-      "import": "./dist/loader.mjs",
-      "require": "./dist/loader.js",
-      "types": "./dist/loader.d.ts"
-    },
+    ".": "./src/index.ts",
+    "./gui-config": "./src/gui-config/gui.config.ts",
+    "./components": "./src/components/index.ts",
+    "./components/*": "./src/components/*.tsx",
+    "./tw-config": "./src/tw-config/index.css",
+    "./brand.json": "./src/brand/brand.json",
+    "./loader": "./src/brand/loader.ts",
+    "./gui-types": "./src/gui.d.ts",
     "./assets/*": "./assets/*"
   },
   "files": [
     "dist",
+    "src",
     "assets",
-    "brand.json"
+    "brand.json",
+    "gui-config",
+    "tw-config"
   ],
   "scripts": {
+    "tc": "tsc --noEmit",
     "build": "tsup src/index.ts src/loader.ts --format cjs,esm --dts --clean",
-    "dev": "tsup src/index.ts src/loader.ts --format cjs,esm --dts --watch"
+    "dev": "tsup src/index.ts src/loader.ts --format cjs,esm --dts --watch",
+    "pub": "./scripts/publish.sh --"
+  },
+  "dependencies": {
+    "@hanzo/gui": "4.3.0",
+    "@hanzogui/button": "3.0.3",
+    "@hanzogui/config-default": "3.0.6",
+    "@hanzogui/shorthands": "3.0.6",
+    "@hanzogui/web": "3.0.6",
+    "@hanzogui/card": "3.0.2",
+    "@hanzogui/switch": "3.0.2",
+    "@hanzogui/theme-builder": "3.0.6"
   },
   "devDependencies": {
+    "@types/react": "^19.2.4",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native-svg": ">=15"
+  },
+  "peerDependenciesMeta": {
+    "react-native-svg": { "optional": true }
   },
   "author": "Liquidity",
   "license": "MIT",

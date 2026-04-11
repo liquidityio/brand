@@ -44,6 +44,10 @@ export interface BrandTheme {
   statusCritical?: string
   /** Warning color */
   statusWarning?: string
+  /** Info callout background (tips, hints) */
+  infoBg?: string
+  /** Info callout border */
+  infoBorder?: string
   /** Overlay/scrim color */
   scrim?: string
 }
