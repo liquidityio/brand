@@ -40,10 +40,38 @@
 //
 // ============================================================
 
-import { createFont, createGui } from '@hanzo/gui'
+import { createGui } from '@hanzo/gui'
 import { createThemes } from '@hanzogui/theme-builder'
 import { shorthands as baseShorthands } from '@hanzogui/shorthands'
 import { getDefaultGuiConfig } from '@hanzogui/config-default'
+
+type GenericFont = {
+  size: Record<string | number, number>
+  lineHeight?: Record<string | number, number>
+  weight?: Record<string | number, string>
+  letterSpacing?: Record<string | number, number>
+  family?: string
+  face?: Record<string, Record<string, { normal: string }>>
+  [key: string]: unknown
+}
+
+const createFont = <A extends GenericFont>(font: A): A => {
+  const sizeKeys = Object.keys(font.size || {})
+  const processed = Object.fromEntries(
+    Object.entries(font).map(([key, section]) => {
+      if (typeof section === 'string' || section == null) return [key, section]
+      const sectionObj = section as Record<string, unknown>
+      const keys = [...new Set([...sizeKeys, ...Object.keys(sectionObj)])]
+      let fill = sectionObj[Object.keys(sectionObj)[0]]
+      return [key, Object.fromEntries(keys.map((k) => {
+        const v = sectionObj[k] ?? fill
+        fill = v
+        return [k, v]
+      }))]
+    })
+  )
+  return Object.freeze(processed) as A
+}
 
 // Extract media and tokens from the default config
 const _defaultConfig = getDefaultGuiConfig('web')
@@ -543,7 +571,7 @@ const config = createGui({
   },
   media,
   shorthands,
-  selectionStyles: (theme) =>
+  selectionStyles: (theme: Record<string, string>) =>
     theme.color5
       ? { backgroundColor: theme.color5, color: theme.color11 }
       : null,
