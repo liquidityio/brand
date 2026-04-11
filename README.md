@@ -55,9 +55,9 @@ assets/
 ## Build
 
 ```bash
-npm run build    # tsup: cjs + esm + .d.ts → dist/
-npm run tc       # typecheck only
-npm run dev      # watch mode
+pnpm build    # tsup: cjs + esm + .d.ts → dist/
+pnpm tc       # typecheck only
+pnpm dev      # watch mode
 ```
 
 ## Publish
@@ -67,6 +67,12 @@ npm run dev      # watch mode
 ./publish.sh minor      # bump minor  (1.1.1 → 1.2.0)
 ./publish.sh major      # bump major  (1.1.1 → 2.0.0)
 ./publish.sh 3.0.0      # exact version
+
+#  OR
+
+pnpm pub
+pnpm pub minor
+# etc
 ```
 
 The script builds, bumps version in `package.json`, commits as `v{version}`, tags, and publishes to npm. It refuses to run on a dirty working tree. Push is left to you:
@@ -75,7 +81,7 @@ The script builds, bumps version in `package.json`, commits as `v{version}`, tag
 git push && git push --tags
 ```
 
-Or use `npm run release` as an alias for `./publish.sh`.
+Or use `pnpm pub` as an alias for `./publish.sh`.
 
 ## Consumers
 
