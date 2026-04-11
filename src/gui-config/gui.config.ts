@@ -40,10 +40,13 @@
 //
 // ============================================================
 
-import { createFont, createGui } from '@hanzo/gui'
+import { createGui } from '@hanzo/gui'
+// @ts-ignore — createFont exists at runtime via @hanzogui/web but pnpm strict hoisting hides types
+import { createFont } from '@hanzogui/web'
 import { createThemes } from '@hanzogui/theme-builder'
-import { shorthands as baseShorthands } from '@hanzogui/shorthands'
+import { shorthands as baseShorthands } from '@hanzogui/shorthands/v4'
 import { getDefaultGuiConfig } from '@hanzogui/config-default'
+import brandJson from '../brand/brand.json'
 
 // Extract media and tokens from the default config
 const _defaultConfig = getDefaultGuiConfig('web')
@@ -152,7 +155,39 @@ const brandDark: Record<string, string> = {
 
 const shorthands = {
   ...baseShorthands,
-  op: 'opacity',  // alias for upstream 'o'
+
+  // Dimensions
+  w: 'width',
+  h: 'height',
+
+  // Flex
+  f: 'flex',
+  fb: 'flexBasis',
+  fd: 'flexDirection',
+  fw: 'flexWrap',
+
+  // Border — width
+  bw: 'borderWidth',
+  btw: 'borderTopWidth',
+  bbw: 'borderBottomWidth',
+  blw: 'borderLeftWidth',
+  brw: 'borderRightWidth',
+
+  // Border — color
+  bc: 'borderColor',
+  btc: 'borderTopColor',
+  bbc: 'borderBottomColor',
+  blc: 'borderLeftColor',
+  brc: 'borderRightColor',
+
+  // Overflow
+  ov: 'overflow',
+
+  // Opacity
+  op: 'opacity',
+
+  // Display / position
+  pos: 'position',
 } as const
 
 // ────────────────────────────────────────────────────────────
@@ -307,20 +342,27 @@ const themes = createThemes({
     if (!palette || palette.length < 12) return {} as Record<string, string>
     const bgIdx = 7 // PALETTE_BACKGROUND_OFFSET
     const borderIdx = bgIdx + 2
+    // Detect dark vs light by comparing palette[0] to darkPalette[0]
+    const isDark = palette[0] === darkPalette[0]
+    const brand = isDark ? brandDark : brandLight
+    const bt = isDark ? brandJson.brand.theme?.dark : brandJson.brand.theme?.light
     return {
       backgroundHover: palette[bgIdx + 1] as string,
       backgroundPress: palette[bgIdx + 2] as string,
       borderColorHover: palette[borderIdx + 1] as string,
       borderColorPress: palette[borderIdx + 2] as string,
-      // Brand primary action color — available as $brandPrimary in all themes
-      brandPrimary: '#1a2744',
-      brandPrimaryHover: '#243561',
-      brandPrimaryPress: '#3a5289',
-      brandPrimaryTrack: '#6d84b4',
-      brandDisabled: '#585858',
-      brandPrimaryText: '#ffffff',
-      toggleTrackOff: '#b7b7b7',
-      toggleBorderOff: '#424f60',
+      // Brand primary action color — derived from brand accent palette
+      brandPrimary: brand.brand10,
+      brandPrimaryHover: brand.brand9,
+      brandPrimaryPress: brand.brand8,
+      brandPrimaryTrack: brand.brand6,
+      brandDisabled: palette[7] as string,
+      brandPrimaryText: palette[0] as string,
+      toggleTrackOff: palette[7] as string,
+      toggleBorderOff: brand.brand9,
+      // Info callout (tips boxes, hints) — from brand theme
+      bgInfo: bt?.infoBg,
+      borderColorInfo: bt?.infoBorder,
     }
   },
 })
@@ -543,7 +585,7 @@ const config = createGui({
   },
   media,
   shorthands,
-  selectionStyles: (theme) =>
+  selectionStyles: (theme: Record<string, string>) =>
     theme.color5
       ? { backgroundColor: theme.color5, color: theme.color11 }
       : null,

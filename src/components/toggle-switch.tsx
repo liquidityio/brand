@@ -1,4 +1,4 @@
-import { Switch } from '@hanzogui/switch'
+import { Switch } from '@hanzo/gui'
 
 // TODO: Move to @hanzo/gui as a library component with tests.
 //

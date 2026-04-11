@@ -57,13 +57,13 @@
   /* --------------------------------------------------------
      Spacing / size scale
      -------------------------------------------------------- */
-  --spacing-2xs: 2px;
-  --spacing-xs:  4px;
-  --spacing-sm:  8px;
-  --spacing-md:  16px;
-  --spacing-ml:  24px;
-  --spacing-lg:  32px;
-  --spacing-xl:  48px;
+  --spacing-2:  2px;
+  --spacing-4:  4px;
+  --spacing-8:  8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
 
   --spacing-header-height:           56px;
   --spacing-banner-height:           34px;
@@ -145,7 +145,7 @@
   --color-bg-underlay: oklch(var(--ch-astra-200));
 
   --color-bg-base:     white;
-;
+
   --color-bg-raised:   oklch(var(--ch-astra-100));
   --color-bg-inverse:  oklch(var(--ch-astra-1000));
   --color-bg-quiet:    oklch(var(--ch-astra-2000) / .07);
