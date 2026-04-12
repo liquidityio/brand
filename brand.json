@@ -28,36 +28,49 @@
     "discord": "",
     "logoUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/logo.svg",
     "faviconUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/favicon.svg",
-    "primaryColor": "#3B82F6",
+    "primaryColor": "#FFFFFF",
     "theme": {
       "light": {
-        "accent1": "#2563EB",
-        "accent1Hovered": "#1D4ED8",
+        "accent1": "#000000",
+        "accent1Hovered": "#1a1a1a",
         "surface1": "#FFFFFF",
-        "surface2": "#EFF6FF",
+        "surface2": "#F5F5F5",
         "neutral1": "#111827",
-        "neutral2": "rgba(17, 24, 39, 0.6)"
+        "neutral2": "rgba(17, 24, 39, 0.6)",
+        "surface3": "#E5E5E5"
       },
       "dark": {
-        "accent1": "#60A5FA",
-        "accent1Hovered": "#93C5FD",
+        "accent1": "#FFFFFF",
+        "accent1Hovered": "#E5E5E5",
         "surface1": "#000000",
-        "surface2": "#172554",
+        "surface2": "#0a0a0a",
         "neutral1": "#F9FAFB",
-        "neutral2": "rgba(249, 250, 251, 0.6)"
+        "neutral2": "rgba(249, 250, 251, 0.6)",
+        "surface3": "#141414"
       }
     }
   },
   "chains": {
-    "defaultChainId": 1,
-    "supported": [1, 96369, 42161, 8453, 137]
+    "defaultChainId": 8675309,
+    "supported": [
+      8675309,
+      8675310,
+      8675311,
+      1337,
+      31337
+    ]
   },
   "rpc": {
     "1": "https://eth.llamarpc.com",
     "96369": "https://api.lux.network/ext/bc/C/rpc",
     "42161": "https://arb1.arbitrum.io/rpc",
     "8453": "https://mainnet.base.org",
-    "137": "https://polygon-rpc.com"
+    "137": "https://polygon-rpc.com",
+    "8675309": "https://rpc.main.satschel.com",
+    "8675310": "https://rpc.test.satschel.com",
+    "8675311": "https://rpc.dev.satschel.com",
+    "1337": "http://localhost:8545/ext/bc/C/rpc",
+    "31337": "http://localhost:8545/ext/bc/C/rpc"
   },
   "api": {
     "graphql": "",
