@@ -40,7 +40,6 @@ export interface BrandIdentity {
   // Assets
   logoUrl: string
   faviconUrl: string
-  primaryColor: string
 }
 
 /** Full org config — the shape of brand.json. */

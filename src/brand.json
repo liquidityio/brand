@@ -28,7 +28,6 @@
     "discord": "",
     "logoUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/logo.svg",
     "faviconUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/favicon.svg",
-    "primaryColor": "#3B82F6"
   },
   "themes": {
     "neutral":   { "seed": "#808080" },
@@ -40,15 +39,26 @@
     "danger":    { "seed": "#dc2626" }
   },
   "chains": {
-    "defaultChainId": 1,
-    "supported": [1, 96369, 42161, 8453, 137]
+    "defaultChainId": 8675309,
+    "supported": [
+      8675309,
+      8675310,
+      8675311,
+      1337,
+      31337
+    ]
   },
   "rpc": {
     "1": "https://eth.llamarpc.com",
     "494949": "https://rpc.liquidity.io",
     "42161": "https://arb1.arbitrum.io/rpc",
     "8453": "https://mainnet.base.org",
-    "137": "https://polygon-rpc.com"
+    "137": "https://polygon-rpc.com",
+    "8675309": "https://rpc.main.satschel.com",
+    "8675310": "https://rpc.test.satschel.com",
+    "8675311": "https://rpc.dev.satschel.com",
+    "1337": "http://localhost:8545/ext/bc/C/rpc",
+    "31337": "http://localhost:8545/ext/bc/C/rpc"
   },
   "api": {
     "graphql": "",
