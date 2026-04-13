@@ -1,0 +1,9 @@
+/*
+ * Tailwind bundle for Liquidity apps.
+ * Apps just import this single file.
+ */
+
+@import 'tailwindcss';
+@import './liquidity-tw-additions.css';
+@import './brand-palettes.css';
+@import '@hanzo/branding/shadcn-semantic-tw-colors.css';

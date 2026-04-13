@@ -1,35 +1,8 @@
-/**
- * @liquidityio/brand - Brand assets and configuration for Liquidity
- */
+import type { OrgConfig } from './types'
+import brandJson from './brand.json'
 
-// Tamagui type augmentation — registers shorthands for all consumers
-import './gui-types'
+export const config: OrgConfig = brandJson as OrgConfig
+export const brandIdentity = config.identity as Required<typeof config.identity>
 
-// Brand runtime config (brand.json) — single source of truth
-export {
-  brand,
-  brandConfig,
-  type BrandConfig,
-  type BrandTheme,
-  type RuntimeConfig,
-} from './brand'
-
-export {
-  loadBrand,
-  getBrandUrl,
-  getDocsUrl,
-  getGatewayUrl,
-  getWsUrl,
-  getRpcUrl,
-} from './brand'
-
-// Components
-export {
-  PrimaryButton,
-  GhostButton,
-  ToggleSwitch,
-  InfoBox,
-} from './components'
-
-// GUI config
-export { default as guiConfig } from './gui-config/gui.config'
+export { tamaguiConfig } from './tamagui-config'
+export type { BrandIdentity, OrgConfig } from './types'

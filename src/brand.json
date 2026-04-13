@@ -1,5 +1,5 @@
 {
-  "brand": {
+  "identity": {
     "name": "Liquidity",
     "title": "Liquidity | Regulated Digital Assets",
     "description": "Regulated digital asset exchange",
@@ -28,31 +28,16 @@
     "discord": "",
     "logoUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/logo.svg",
     "faviconUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/favicon.svg",
-    "primaryColor": "#3B82F6",
-    "theme": {
-      "light": {
-        "accent1": "#1a2744",
-        "accent1Hovered": "#243561",
-        "surface1": "#FFFFFF",
-        "surface2": "#EFF6FF",
-        "surface3": "#F3F4F6",
-        "neutral1": "#111827",
-        "neutral2": "rgba(17, 24, 39, 0.6)",
-        "infoBg": "rgba(255, 200, 50, 0.08)",
-        "infoBorder": "rgba(200, 160, 30, 0.3)"
-      },
-      "dark": {
-        "accent1": "#60A5FA",
-        "accent1Hovered": "#93C5FD",
-        "surface1": "#000000",
-        "surface2": "#172554",
-        "surface3": "#1E1E1E",
-        "neutral1": "#F9FAFB",
-        "neutral2": "rgba(249, 250, 251, 0.6)",
-        "infoBg": "rgba(255, 200, 50, 0.06)",
-        "infoBorder": "rgba(200, 160, 30, 0.2)"
-      }
-    }
+    "primaryColor": "#3B82F6"
+  },
+  "themes": {
+    "neutral":   { "seed": "#808080" },
+    "primary":   { "seed": "#1a2744" },
+    "secondary": { "seed": "#721be4" },
+    "info":      { "seed": "#2563eb" },
+    "success":   { "seed": "#16a34a" },
+    "warning":   { "seed": "#d97706" },
+    "danger":    { "seed": "#dc2626" }
   },
   "chains": {
     "defaultChainId": 1,
