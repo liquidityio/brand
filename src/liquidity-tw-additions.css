@@ -1,0 +1,21 @@
+/* ============================================================
+   Liquidity-specific Tailwind additions (non-color tokens)
+   ============================================================
+   Org-specific easing curves and typography on top of @hanzo/branding.
+*/
+
+@theme {
+  /* Easing */
+  --ease-out-cubic:    cubic-bezier(.33, 1, .68, 1);
+  --ease-in-out-cubic: cubic-bezier(.65, 0, .35, 1);
+  --ease-out-soft:     cubic-bezier(.36, 1.3, .64, 1);
+  --ease-in-out-quart: cubic-bezier(.76, 0, .24, 1);
+  --ease-out-quint:    cubic-bezier(.22, 1, .36, 1);
+  --ease-in-cubic:     cubic-bezier(.32, 0, .67, 0);
+  --ease-in-out-sine:  cubic-bezier(.37, 0, .63, 1);
+
+  /* Typography */
+  --font-sans:  "pplxSans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono:  "pplxSansMono", ui-monospace, monospace;
+  --font-serif: "pplxSerif", ui-serif, Georgia, serif;
+}

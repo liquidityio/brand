@@ -1,17 +1,8 @@
-/**
- * @liquidityio/brand - Brand assets and configuration for Liquidity
- */
+import type { OrgConfig } from './types'
+import brandJson from './brand.json'
 
-// Brand runtime config (brand.json) — single source of truth
-export { brand } from './brand'
-export type { BrandConfig, BrandTheme, RuntimeConfig } from './brand-types'
-export { loadBrand, getBrandUrl, getDocsUrl, getGatewayUrl, getWsUrl, getRpcUrl } from './loader'
+export const config: OrgConfig = brandJson as OrgConfig
+export const brandIdentity = config.identity as Required<typeof config.identity>
 
-// GUI configuration — re-export from gui-config
-export { default as guiConfig } from '../gui-config/gui.config'
-
-// UI components — re-export from components
-export { PrimaryButton, GhostButton, ToggleSwitch } from '../components/index'
-
-// InfoBox — stub (not yet implemented, provides a no-op placeholder)
-export { default as InfoBox } from './info-box'
+export { tamaguiConfig } from './tamagui-config'
+export type { BrandIdentity, OrgConfig } from './types'
