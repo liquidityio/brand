@@ -27,7 +27,7 @@
     "github": "https://github.com/liquidityio",
     "discord": "",
     "logoUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/logo.svg",
-    "faviconUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/favicon.svg",
+    "faviconUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/favicon.svg"
   },
   "themes": {
     "neutral":   { "seed": "#808080" },
