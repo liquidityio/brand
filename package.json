@@ -22,7 +22,7 @@
     "pub": "./scripts/publish.sh"
   },
   "dependencies": {
-    "@hanzo/branding": "workspace:*",
+    "@hanzo/branding": "^3.0.0",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
