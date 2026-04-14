@@ -22,7 +22,8 @@
     "pub": "./scripts/publish.sh"
   },
   "dependencies": {
-    "@hanzo/branding": "^2.0.2"
+    "@hanzo/branding": "workspace:*",
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "tsup": "^8.0.0",

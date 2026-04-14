@@ -30,8 +30,11 @@
     "faviconUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/favicon.svg"
   },
   "themes": {
-    "neutral":   { "seed": "#808080" },
-    "primary":   { "seed": "#1a2744" },
+    "neutral":   {
+      "light": { "seed": "#f0f4fa" },
+      "dark":  { "seed": "#1a1a1a" }
+    },
+    "primary":   { "seed": "#0079c5" },
     "secondary": { "seed": "#721be4" },
     "info":      { "seed": "#2563eb" },
     "success":   { "seed": "#16a34a" },
