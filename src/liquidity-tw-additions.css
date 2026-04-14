@@ -15,7 +15,7 @@
   --ease-in-out-sine:  cubic-bezier(.37, 0, .63, 1);
 
   /* Typography */
-  --font-sans:  "pplxSans", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-mono:  "pplxSansMono", ui-monospace, monospace;
+  --font-sans: "Basel", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "InputMono-Regular", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, monospace;
   --font-serif: "pplxSerif", ui-serif, Georgia, serif;
 }
