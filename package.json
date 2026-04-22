@@ -18,7 +18,8 @@
     "prebuild": "generate-palettes --brandFile src/themes.json",
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
-    "pub": "./scripts/publish.sh"
+    "pub": "./scripts/publish.sh",
+    "ver": "npm view @liquidityio/brand"
   },
   "dependencies": {
     "@hanzo/theming": "^6.0.1"
