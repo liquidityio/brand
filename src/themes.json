@@ -1,5 +1,5 @@
 {
-"themes": {
+  "themes": {
     "neutral":   {
       "light": { "seed": "#f0f4fa" },
       "dark":  { "seed": "#1a1a1a" }

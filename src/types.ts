@@ -40,7 +40,7 @@ export interface BrandIdentity {
   faviconUrl: string
 }
 
-/** Full org config — the shape of liquidity-org-config.json. */
+/** Full org config — the shape of org-config.json. */
 export interface OrgConfig {
   identity: Partial<BrandIdentity>
   chains: {
