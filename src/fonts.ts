@@ -1,4 +1,4 @@
-import type { FontDef } from '@hanzo/branding/tg-config'
+import type { FontDef } from '@hanzo/theming/hanzogui-config'
 
 export const bodyFont: FontDef = {
   family: '"pplxSans", ui-sans-serif, system-ui, -apple-system, sans-serif',

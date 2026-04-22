@@ -1,5 +1,3 @@
-import type { ThemesConfig } from '@hanzo/branding/tg-config'
-
 /** Brand identity — name, domains, social, assets. */
 export interface BrandIdentity {
   name: string
@@ -42,10 +40,9 @@ export interface BrandIdentity {
   faviconUrl: string
 }
 
-/** Full org config — the shape of brand.json. */
+/** Full org config — the shape of liquidity-org-config.json. */
 export interface OrgConfig {
   identity: Partial<BrandIdentity>
-  themes: ThemesConfig
   chains: {
     defaultChainId: number
     supported: number[]

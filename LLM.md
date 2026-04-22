@@ -1,51 +1,53 @@
 # @liquidityio/brand
 
-Canonical home of the `@liquidityio/brand` package. Published to npm.
+Canonical home of the `@liquidityio/brand` package. Published to npm. Thin wrapper over [`@hanzo/theming`](https://github.com/hanzoai/theming) — this package just provides Liquidity-specific data (identity, theme seeds, fonts, assets).
 
 ## Install
 
 ```bash
-npm install @liquidityio/brand
-# or
 pnpm add @liquidityio/brand
 ```
 
-Current version: `1.1.1`
-
 ## Contents
 
-- `src/` -- brand config, loader, types (built with tsup)
-- `gui-config/` -- `gui.config.ts` (@hanzo/gui Tamagui config)
-- `components/` -- styled brand components
-- `tw-config/` -- Tailwind CSS theme (`index.css`)
-- `assets/logo/` -- logos
-- `brand.json` -- brand metadata
+- `src/liquidity-org-config.json` — identity + runtime config (domains, chains, RPC, API, IAM, WalletConnect)
+- `src/themes.json` — 7 theme seeds (neutral, primary, secondary, info, success, warning, danger)
+- `src/fonts.ts` — pplxSans font definitions
+- `src/hanzogui-config.ts` — calls `createHanzoguiConfig` with our seeds and fonts
+- `src/tw-liquidity.css` — bundled CSS for apps (tailwind + additions + palettes + semantic)
+- `src/liquidity-tw-additions.css` — org-specific non-color TW tokens
+- `src/brand-palettes.css` — generated at prebuild time by `generate-palettes` (gitignored)
+- `assets/logo/` — SVG logos
 
 ## Exports
 
 ```typescript
-import { brand } from '@liquidityio/brand'
-import guiConfig from '@liquidityio/brand/gui-config'
-import { BrandComponent } from '@liquidityio/brand/components'
-import '@liquidityio/brand/tw-config'
-import brandJson from '@liquidityio/brand/brand.json'
-import { loadBrand } from '@liquidityio/brand/loader'
+import { config, brandIdentity, hanzoguiConfig } from '@liquidityio/brand'
+import type { BrandIdentity, OrgConfig } from '@liquidityio/brand'
+import orgConfig from '@liquidityio/brand/liquidity-org-config.json'
+import themes from '@liquidityio/brand/themes.json'
+import '@liquidityio/brand/tw-liquidity.css'
+// assets: '@liquidityio/brand/assets/logo/logo.svg' (etc.)
 ```
 
 ## Build
 
 ```bash
-pnpm build   # tsup: cjs + esm + dts
+pnpm build   # prebuild: generate-palettes --brandFile src/themes.json  → tsup cjs+esm+dts
+pnpm tc      # typecheck
+pnpm dev     # watch mode
 ```
 
 ## Publish
 
 ```bash
-npm publish
+pnpm pub               # bump patch + publish
+pnpm pub minor
+pnpm pub 4.1.0
 ```
 
 ## Consumers
 
-- `~/work/liquidity/exchange/` (via `pkgs/brand` re-export or npm)
-- `~/work/liquidity/id/` (npm)
-- `~/work/liquidity/superadmin/` (npm)
+- `liquidityio/exchange` — securities exchange frontend
+- `liquidityio/onboarding` — auth + onboarding app
+- `liquidityio/superadmin` — operator admin panel

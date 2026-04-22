@@ -1,0 +1,14 @@
+{
+"themes": {
+    "neutral":   {
+      "light": { "seed": "#f0f4fa" },
+      "dark":  { "seed": "#1a1a1a" }
+    },
+    "primary":   { "seed": "#0079c5" },
+    "secondary": { "seed": "#721be4" },
+    "info":      { "seed": "#2563eb" },
+    "success":   { "seed": "#16a34a" },
+    "warning":   { "seed": "#d97706" },
+    "danger":    { "seed": "#dc2626" }
+  }
+}
