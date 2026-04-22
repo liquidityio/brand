@@ -1,6 +1,6 @@
 {
   "name": "@liquidityio/brand",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "Org config, theme seeds, and assets for Liquidity",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
@@ -18,7 +18,8 @@
     "prebuild": "generate-palettes --brandFile src/themes.json",
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
-    "pub": "./scripts/publish.sh"
+    "pub": "./scripts/publish.sh",
+    "ver": "npm view @liquidityio/brand"
   },
   "dependencies": {
     "@hanzo/theming": "^6.0.1"
