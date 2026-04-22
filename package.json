@@ -1,13 +1,12 @@
 {
   "name": "@liquidityio/brand",
-  "version": "3.0.1",
+  "version": "4.1.0",
   "description": "Org config, theme seeds, and assets for Liquidity",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./brand.json": "./src/brand.json",
-    "./tw-liquidity.css": "./src/tw-liquidity.css",
+    "./liquidity-tw.css": "./src/liquidity-tw.css",
     "./assets/*": "./assets/*"
   },
   "files": [
@@ -16,14 +15,23 @@
   ],
   "scripts": {
     "tc": "tsc --noEmit",
-    "prebuild": "generate-palettes",
+    "prebuild": "generate-palettes --brandFile src/themes.json",
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "pub": "./scripts/publish.sh"
   },
   "dependencies": {
-    "@hanzo/branding": "^3.0.0",
-    "tailwindcss": "^4.2.2"
+    "@hanzo/theming": "^6.0.1"
+  },
+  "peerDependencies": {
+    "@hanzogui/animations-react-native": ">=2.0.0-rc.41-hanzoai.5 <2.0.0 || >=2.0.6 <3.0.0",
+    "@hanzogui/config-default": ">=2.0.0-rc.41-hanzoai.5 <2.0.0 || >=2.0.6 <3.0.0",
+    "@hanzogui/shorthands": ">=2.0.0-rc.41-hanzoai.5 <2.0.0 || >=2.0.6 <3.0.0",
+    "@hanzogui/theme-builder": ">=2.0.0-rc.41-hanzoai.5 <2.0.0 || >=2.0.6 <3.0.0",
+    "@hanzogui/web": ">=2.0.0-rc.41-hanzoai.5 <2.0.0 || >=2.0.6 <3.0.0",
+    "hanzogui": ">=2.0.0-rc.41-hanzoai.5 <2.0.0 || >=2.0.6 <3.0.0",
+    "react": ">=18",
+    "tailwindcss": ">=4.0.0"
   },
   "devDependencies": {
     "tsup": "^8.0.0",

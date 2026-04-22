@@ -29,18 +29,6 @@
     "logoUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/logo.svg",
     "faviconUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/favicon.svg"
   },
-  "themes": {
-    "neutral":   {
-      "light": { "seed": "#f0f4fa" },
-      "dark":  { "seed": "#1a1a1a" }
-    },
-    "primary":   { "seed": "#0079c5" },
-    "secondary": { "seed": "#721be4" },
-    "info":      { "seed": "#2563eb" },
-    "success":   { "seed": "#16a34a" },
-    "warning":   { "seed": "#d97706" },
-    "danger":    { "seed": "#dc2626" }
-  },
   "chains": {
     "defaultChainId": 8675309,
     "supported": [

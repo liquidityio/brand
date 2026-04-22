@@ -4,6 +4,6 @@
  */
 
 @import 'tailwindcss';
-@import './liquidity-tw-additions.css';
+@import './tw-additions.css';
 @import './brand-palettes.css';
-@import '@hanzo/branding/shadcn-semantic-tw-colors.css';
+@import '@hanzo/theming/shadcn-semantic-tw-colors.css';
