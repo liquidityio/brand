@@ -1,5 +1,5 @@
 {
-  "identity": {
+  "brand": {
     "name": "Liquidity",
     "title": "Liquidity | Regulated Digital Assets",
     "description": "Regulated digital asset exchange",
@@ -9,11 +9,6 @@
     "walletName": "Liquidity Wallet",
     "protocolName": "Liquidity Protocol",
     "copyrightHolder": "Liquidity.io LLC",
-    "ceo": "Coleman Church",
-    "physicalAddress": "5800 Gasparilla Road, Building C, Suite 11, Boca Grande, FL 33921",
-    "mailingAddress": "PO Box 1603, Boca Grande, FL 33921",
-    "corpNumber": "",
-    "phone": "+1-702-744-6734",
     "appDomain": "liquidity.io",
     "docsDomain": "docs.liquidity.io",
     "infoDomain": "info.liquidity.io",
@@ -25,6 +20,11 @@
     "downloadUrl": "https://liquidity.io/wallet",
     "complianceEmail": "compliance@liquidity.io",
     "supportEmail": "support@liquidity.io",
+    "phone": "+1-702-744-6734",
+    "ceo": "Coleman Church",
+    "physicalAddress": "5800 Gasparilla Road, Building C, Suite 11, Boca Grande, FL 33921",
+    "mailingAddress": "PO Box 1603, Boca Grande, FL 33921",
+    "corpNumber": "",
     "twitter": "https://x.com/liquidityio",
     "farcaster": "",
     "linkedin": "",
@@ -32,17 +32,45 @@
     "github": "https://github.com/liquidityio",
     "discord": "",
     "logoUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/logo.svg",
-    "faviconUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/favicon.svg"
+    "faviconUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/favicon.svg",
+    "wordmarkUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/wordmark.svg",
+    "primaryColor": "#0079c5",
+    "theme": {
+      "light": {
+        "accent1": "#0079c5",
+        "accent2": "#721be4",
+        "accent3": "#2563eb",
+        "surface1": "#FFFFFF",
+        "surface2": "#F0F4FA",
+        "surface3": "#E6ECF4",
+        "neutral1": "#0A0A0B",
+        "neutral2": "rgba(10, 10, 11, 0.65)",
+        "neutral3": "rgba(10, 10, 11, 0.45)",
+        "border": "#E5E5E5",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "error": "#dc2626"
+      },
+      "dark": {
+        "accent1": "#0079c5",
+        "accent2": "#721be4",
+        "accent3": "#2563eb",
+        "surface1": "#0A0A0B",
+        "surface2": "#1a1a1a",
+        "surface3": "#262626",
+        "neutral1": "#FFFFFF",
+        "neutral2": "rgba(255, 255, 255, 0.65)",
+        "neutral3": "rgba(255, 255, 255, 0.45)",
+        "border": "#262626",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "error": "#dc2626"
+      }
+    }
   },
   "chains": {
     "defaultChainId": 8675309,
-    "supported": [
-      8675309,
-      8675310,
-      8675311,
-      1337,
-      31337
-    ]
+    "supported": [8675309, 8675310, 8675311, 1337, 31337]
   },
   "rpc": {
     "1": "https://eth.llamarpc.com",

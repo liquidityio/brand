@@ -26,13 +26,13 @@ export interface BrandIdentity {
   // Contact
   complianceEmail: string
   supportEmail: string
-  phone: string
 
-  // Legal / corporate
-  ceo: string
-  physicalAddress: string
-  mailingAddress: string
-  corpNumber: string     // e.g. "FL 123456789" — blank until registered
+  // Legal / corporate (optional — populated by white-label tenants like Liquidity)
+  phone?: string
+  ceo?: string
+  physicalAddress?: string
+  mailingAddress?: string
+  corpNumber?: string     // e.g. "FL 123456789" — blank until registered
 
   // Social
   twitter: string
