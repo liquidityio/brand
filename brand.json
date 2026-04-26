@@ -1,0 +1,99 @@
+{
+  "brand": {
+    "name": "Liquidity",
+    "title": "Liquidity | Regulated Digital Assets",
+    "description": "Regulated digital asset exchange",
+    "shortName": "LQDTY",
+    "labsName": "Liquidity",
+    "legalEntity": "Liquidity.io LLC",
+    "walletName": "Liquidity Wallet",
+    "protocolName": "Liquidity Protocol",
+    "copyrightHolder": "Liquidity.io LLC",
+    "appDomain": "liquidity.io",
+    "docsDomain": "docs.liquidity.io",
+    "infoDomain": "info.liquidity.io",
+    "gatewayDomain": "api.liquidity.io",
+    "wsDomain": "ws.liquidity.io",
+    "helpUrl": "https://docs.liquidity.io",
+    "termsUrl": "https://liquidity.io/terms",
+    "privacyUrl": "https://liquidity.io/privacy",
+    "downloadUrl": "https://liquidity.io/wallet",
+    "complianceEmail": "compliance@liquidity.io",
+    "supportEmail": "support@liquidity.io",
+    "phone": "+1-702-744-6734",
+    "ceo": "Coleman Church",
+    "physicalAddress": "5800 Gasparilla Road, Building C, Suite 11, Boca Grande, FL 33921",
+    "mailingAddress": "PO Box 1603, Boca Grande, FL 33921",
+    "corpNumber": "",
+    "twitter": "https://x.com/liquidityio",
+    "farcaster": "",
+    "linkedin": "",
+    "tiktok": "",
+    "github": "https://github.com/liquidityio",
+    "discord": "",
+    "logoUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/logo.svg",
+    "faviconUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/favicon.svg",
+    "wordmarkUrl": "https://cdn.jsdelivr.net/npm/@liquidityio/brand@latest/assets/logo/wordmark.svg",
+    "primaryColor": "#0079c5",
+    "theme": {
+      "light": {
+        "accent1": "#0079c5",
+        "accent2": "#721be4",
+        "accent3": "#2563eb",
+        "surface1": "#FFFFFF",
+        "surface2": "#F0F4FA",
+        "surface3": "#E6ECF4",
+        "neutral1": "#0A0A0B",
+        "neutral2": "rgba(10, 10, 11, 0.65)",
+        "neutral3": "rgba(10, 10, 11, 0.45)",
+        "border": "#E5E5E5",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "error": "#dc2626"
+      },
+      "dark": {
+        "accent1": "#0079c5",
+        "accent2": "#721be4",
+        "accent3": "#2563eb",
+        "surface1": "#0A0A0B",
+        "surface2": "#1a1a1a",
+        "surface3": "#262626",
+        "neutral1": "#FFFFFF",
+        "neutral2": "rgba(255, 255, 255, 0.65)",
+        "neutral3": "rgba(255, 255, 255, 0.45)",
+        "border": "#262626",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "error": "#dc2626"
+      }
+    }
+  },
+  "chains": {
+    "defaultChainId": 8675309,
+    "supported": [8675309, 8675310, 8675311, 1337, 31337]
+  },
+  "rpc": {
+    "1": "https://eth.llamarpc.com",
+    "494949": "https://rpc.liquidity.io",
+    "42161": "https://arb1.arbitrum.io/rpc",
+    "8453": "https://mainnet.base.org",
+    "137": "https://polygon-rpc.com",
+    "8675309": "https://rpc.main.satschel.com",
+    "8675310": "https://rpc.test.satschel.com",
+    "8675311": "https://rpc.dev.satschel.com",
+    "1337": "http://localhost:8545/ext/bc/C/rpc",
+    "31337": "http://localhost:8545/ext/bc/C/rpc"
+  },
+  "api": {
+    "graphql": "",
+    "gateway": "https://api.liquidity.io",
+    "insights": "https://insights.satschel.com"
+  },
+  "iam": {
+    "provider": "https://id.liquidity.io",
+    "clientId": "liquidity-app"
+  },
+  "walletConnect": {
+    "projectId": ""
+  }
+}
