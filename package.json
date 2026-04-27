@@ -24,7 +24,7 @@
     "ver": "npm view @liquidityio/brand"
   },
   "dependencies": {
-    "@hanzo/theming": "^7.0.0"
+    "@hanzo/theming": "^7.1.0"
   },
   "peerDependencies": {
     "@hanzogui/animations-react-native": ">=102.0.0-rc.41-hanzoai.1 <103.0.0",
