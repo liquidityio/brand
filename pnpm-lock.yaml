@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@hanzo/theming':
-        specifier: ^7.2.0
-        version: 7.2.0(dd4d1e252526b92e0295a73468375f25)
+        specifier: ^7.2.1
+        version: 7.2.1(dd4d1e252526b92e0295a73468375f25)
       '@hanzogui/animations-react-native':
         specifier: '>=102.0.0-rc.41-hanzoai.1 <103.0.0'
         version: 102.0.0-rc.41-hanzoai.1(react-dom@19.2.5(react@19.2.5))(react-native@0.85.0(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.5))(react@19.2.5)
@@ -293,8 +293,8 @@ packages:
   '@floating-ui/utils@0.2.11':
     resolution: {integrity: sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg==}
 
-  '@hanzo/theming@7.2.0':
-    resolution: {integrity: sha512-FMutANyt/LDH7kLDg+/8EtskVlvpHNIKoQaIRZbxOAftmkepPKX/V/Ai2VS76Jc9vOOibjWwD/OiubYwrv20SQ==}
+  '@hanzo/theming@7.2.1':
+    resolution: {integrity: sha512-Xs04hRuGPv5V35NqKoI5/m3TR/v0yPGHHLgwksNjsz5pFh6962m95brYL94Rg0R/sqtTbgOceE60YwgNP1q9Nw==}
     hasBin: true
     peerDependencies:
       '@hanzogui/animations-react-native': '>=102.0.0-rc.41-hanzoai.1 <103.0.0'
@@ -2209,7 +2209,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.11': {}
 
-  '@hanzo/theming@7.2.0(dd4d1e252526b92e0295a73468375f25)':
+  '@hanzo/theming@7.2.1(dd4d1e252526b92e0295a73468375f25)':
     dependencies:
       '@hanzogui/animations-react-native': 102.0.0-rc.41-hanzoai.1(react-dom@19.2.5(react@19.2.5))(react-native@0.85.0(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.5))(react@19.2.5)
       '@hanzogui/config-default': 102.0.0-rc.41-hanzoai.1(react-dom@19.2.5(react@19.2.5))(react-native@0.85.0(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.5))(react@19.2.5)
